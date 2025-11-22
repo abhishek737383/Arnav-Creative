@@ -42,7 +42,7 @@ export default function Navbar() {
                 /> }
               </div>
               <span className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                WebCraft
+              Arnav Creative 
               </span>
             </Link>
 

@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import './globals.css'
 
 export const metadata = {
-  title: 'Digital Solutions',
+  title: 'Arnav Creative ',
   description: 'Transform your business with our premium web development, mobile apps, UI/UX design, and digital marketing services. Fast, reliable, and results-driven.',
 }
 
