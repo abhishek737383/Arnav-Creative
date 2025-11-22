@@ -32,15 +32,14 @@ export default function Navbar() {
               {/* Replace with your actual logo image */}
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                 {/* Temporary logo - replace with your Image component */}
-                <span className="text-white font-bold text-lg">WC</span>
                 {/* Uncomment below and replace with your actual logo */}
-                {/* <Image 
+                { <Image 
                   src="/logo.png" 
                   alt="WebCraft" 
                   width={48} 
                   height={48}
                   className="rounded-xl"
-                /> */}
+                /> }
               </div>
               <span className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
                 WebCraft
@@ -70,13 +69,13 @@ export default function Navbar() {
                 Services
                 <span className="absolute -bottom-2 left-0 w-0 h-1 bg-blue-500 transition-all duration-300 group-hover:w-full rounded-full"></span>
               </Link>
-              <Link 
+              {/* <Link 
                 href="/portfolio" 
                 className="text-gray-300 hover:text-white text-lg font-semibold transition-colors duration-200 relative group"
               >
                 Portfolio
                 <span className="absolute -bottom-2 left-0 w-0 h-1 bg-blue-500 transition-all duration-300 group-hover:w-full rounded-full"></span>
-              </Link>
+              </Link> */}
               <Link 
                 href="/pricing" 
                 className="text-gray-300 hover:text-white text-lg font-semibold transition-colors duration-200 relative group"

@@ -51,40 +51,36 @@ export default function Home() {
               {/* Badge */}
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-8 animate-pulse">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-ping"></span>
-                <span className="text-sm font-medium text-blue-100">Trusted by 500+ Businesses</span>
+                <span className="text-sm font-medium text-blue-100">Trusted by 50+ Businesses</span>
               </div>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                We Design & Develop
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mt-4 animate-gradient">
-                  Modern, Responsive, High-Converting Websites
-                </span>
-              </h1>
+            We Design & Develop
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-gradient">
+           Modern, Responsive
+           </span>
+             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-gradient">
+               High-Converting Websites
+              </span>
+               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
                 Professional web design, development, SEO, branding, and complete digital solutions for your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-on-scroll">
+              <div className="flex justify-center items-center animate-on-scroll">
                 <Link 
                   href="/contact"
                   className="bg-white text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105 transform hover:-translate-y-1 active:scale-95 text-center"
                 >
                   Get a Free Quote
                 </Link>
-                <button 
-                  onClick={scrollToPortfolio}
-                  className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105 transform hover:-translate-y-1 active:scale-95 group relative overflow-hidden"
-                >
-                  <span className="relative z-10">View Our Portfolio</span>
-                  <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                </button>
               </div>
 
               {/* Stats Bar */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-8 border-t border-white/20 animate-on-scroll">
                 {[
-                  { number: '500+', label: 'Projects Done' },
+                  { number: '20+', label: 'Projects Done' },
                   { number: '99%', label: 'Client Satisfaction' },
-                  { number: '50+', label: 'Team Members' },
+                  { number: '10+', label: 'Team Members' },
                   { number: '24/7', label: 'Support' }
                 ].map((stat, index) => (
                   <div key={index} className="text-center">
@@ -211,10 +207,10 @@ export default function Home() {
                 gradient: "from-yellow-500 to-orange-500"
               },
               {
-                title: "SEO & Digital Marketing",
-                description: "Drive targeted traffic and increase your online visibility",
-                icon: "📈",
-                gradient: "from-red-500 to-pink-500"
+                title: "Business Freelancing",
+                description: "Professional freelancing solutions for your business needs",
+                icon: "💎",
+                gradient: "from-indigo-500 to-purple-500"
               },
               {
                 title: "Website Maintenance",
@@ -375,7 +371,7 @@ export default function Home() {
           <div className="text-xl font-semibold text-blue-300 mb-2 animate-on-scroll">
             — Sarah Johnson
           </div>
-          <div className="text-blue-200 mb-8 animate-on-scroll">CEO, TechStart Inc.</div>
+          <div className="text-blue-200 mb-8 animate-on-scroll">TechStart Inc</div>
           <div className="flex justify-center space-x-1 animate-on-scroll">
             {[1, 2, 3, 4, 5].map((star) => (
               <span key={star} className="text-2xl text-yellow-400 animate-pulse" style={{ animationDelay: `${star * 100}ms` }}>⭐</span>
