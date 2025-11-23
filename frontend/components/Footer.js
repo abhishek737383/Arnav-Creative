@@ -9,23 +9,29 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 group mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">W</span>
+                <span className="text-white font-bold text-sm">A</span>
               </div>
               <span className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                WebCraft
+                Arnav Creative Solutions 
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              We create digital experiences that inspire and drive results for businesses worldwide.
+              We create digital experiences that inspire and drive results for businesses worldwide with 15+ years of industry expertise.
             </p>
             <div className="flex space-x-3">
-              {['📘', '🐦', '📷', '💼'].map((social, index) => (
+              {[
+                { icon: '📘', label: 'Facebook' },
+                { icon: '🐦', label: 'Twitter' },
+                { icon: '📷', label: 'Instagram' },
+                { icon: '💼', label: 'LinkedIn' }
+              ].map((social, index) => (
                 <a
                   key={index}
                   href="#"
                   className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-all duration-300 hover:scale-110 text-sm"
+                  aria-label={social.label}
                 >
-                  {social}
+                  {social.icon}
                 </a>
               ))}
             </div>
@@ -35,10 +41,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <div className="space-y-2">
-              {['Home', 'About', 'Services', 'Portfolio', 'Pricing', 'Contact'].map((link) => (
+              {['Home', 'About', 'Services', 'Pricing', 'Contact'].map((link) => (
                 <Link
                   key={link}
-                  href={`/${link.toLowerCase().replace(' ', '-')}`}
+                  href={`/${link.toLowerCase() === 'home' ? '' : link.toLowerCase()}`}
                   className="block text-gray-400 hover:text-white text-sm transition-colors duration-200 hover:translate-x-1 transform"
                 >
                   {link}
@@ -55,9 +61,9 @@ export default function Footer() {
                 'Web Design',
                 'Web Development',
                 'E-commerce',
-                'SEO',
-                'Branding',
-                'Maintenance'
+                'Branding & Logo',
+                'Business Freelancing',
+                'Website Maintenance'
               ].map((service) => (
                 <Link
                   key={service}
@@ -76,15 +82,30 @@ export default function Footer() {
             <div className="space-y-3 text-gray-400 text-sm">
               <div className="flex items-center space-x-2">
                 <span>📧</span>
-                <span>hello@webcraft.com</span>
+                <a href="mailto:acstechbiz@outlook.com" className="hover:text-white transition-colors duration-200">
+                  acstechbiz@outlook.com
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <span>📞</span>
-                <span>+1 (555) 123-4567</span>
+                <a href="tel:+919892018597" className="hover:text-white transition-colors duration-200">
+                  +91 - 9892018597
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <span>📍</span>
-                <span>New York, NY 10001</span>
+                <span>Mumbai - 401107</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span>🔗</span>
+                <a 
+                  href="https://arnav-creative.netlify.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  arnav-creative.netlify.app
+                </a>
               </div>
             </div>
           </div>
@@ -94,16 +115,16 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm text-center md:text-left mb-4 md:mb-0">
-              © {new Date().getFullYear()} WebCraft. All rights reserved.
+              © {new Date().getFullYear()} Arnav Creative Solutions. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              <Link href="/legal/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link href="/legal/terms-conditions" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <Link href="/terms-conditions" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
                 Terms & Conditions
               </Link>
-              <Link href="/legal/refund-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <Link href="/refund-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
                 Refund Policy
               </Link>
             </div>

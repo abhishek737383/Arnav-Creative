@@ -32,8 +32,6 @@ export default function Pricing() {
     {
       id: 1,
       name: "Starter Website",
-      price: "₹8,999",
-      originalPrice: "₹12,999",
       description: "Perfect for small businesses and personal websites",
       features: [
         "3-5 pages website",
@@ -52,8 +50,6 @@ export default function Pricing() {
     {
       id: 2,
       name: "Business Pro",
-      price: "₹24,999",
-      originalPrice: "₹34,999",
       description: "Ideal for growing businesses and professional services",
       features: [
         "5-10 pages custom website",
@@ -74,8 +70,6 @@ export default function Pricing() {
     {
       id: 3,
       name: "E-commerce Plus",
-      price: "₹49,999",
-      originalPrice: "₹69,999",
       description: "Complete online store with advanced features",
       features: [
         "Unlimited products & categories",
@@ -97,8 +91,6 @@ export default function Pricing() {
     {
       id: 4,
       name: "Custom Enterprise",
-      price: "Custom Quote",
-      originalPrice: "",
       description: "Tailored solutions for complex business needs",
       features: [
         "Fully custom design & development",
@@ -132,34 +124,8 @@ export default function Pricing() {
             Choose Your <span className="text-blue-600">Perfect Plan</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            All-inclusive packages with everything you need to succeed online. 
-            <span className="block text-blue-600 font-semibold mt-2">30-Day Money Back Guarantee</span>
+            All-inclusive packages with everything you need to succeed online.
           </p>
-        </div>
-
-        {/* Billing Toggle */}
-        <div className="flex justify-center mb-12 animate-on-scroll">
-          <div className="bg-white rounded-2xl p-3 shadow-lg border border-gray-200 flex items-center space-x-6">
-            <span className={`text-lg font-semibold ${!isAnnual ? 'text-blue-600' : 'text-gray-500'}`}>
-              Monthly Billing
-            </span>
-            <button
-              onClick={() => setIsAnnual(!isAnnual)}
-              className="relative w-16 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-300 focus:outline-none hover:shadow-lg"
-            >
-              <div className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-lg transition-transform duration-300 ${
-                isAnnual ? 'transform translate-x-8' : ''
-              }`}></div>
-            </button>
-            <div className="flex items-center space-x-2">
-              <span className={`text-lg font-semibold ${isAnnual ? 'text-blue-600' : 'text-gray-500'}`}>
-                Annual Billing
-              </span>
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                Save 25%
-              </span>
-            </div>
-          </div>
         </div>
 
         {/* Pricing Grid */}
@@ -188,12 +154,13 @@ export default function Pricing() {
                   {plan.icon}
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
-                <div className="flex items-baseline justify-center space-x-2 mb-3">
-                  <span className="text-4xl md:text-5xl font-bold">{plan.price}</span>
-                  {plan.originalPrice && (
-                    <span className="text-white/70 line-through text-xl">{plan.originalPrice}</span>
-                  )}
+                
+                {/* Get Started Now Section */}
+                <div className="text-center mb-3">
+                  <div className="text-2xl md:text-3xl font-bold">Get Started Now</div>
+                  <div className="text-white/70 text-sm mt-2">No credit card required</div>
                 </div>
+                
                 <p className="text-white/90 text-sm leading-relaxed">{plan.description}</p>
               </div>
 
@@ -226,13 +193,13 @@ export default function Pricing() {
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}
                 >
-                  {plan.price === "Custom Quote" ? "Get Custom Quote" : "Get Started Now"}
+                  Get Started Now
                 </Link>
 
                 {/* Additional Info */}
                 <div className="text-center mt-4">
                   <p className="text-gray-500 text-sm">
-                    {plan.id === 4 ? "Flexible payment options" : "No credit card required"}
+                    No credit card required
                   </p>
                 </div>
               </div>
@@ -343,15 +310,9 @@ export default function Pricing() {
             >
               Get Free Consultation
             </Link>
-            <Link 
-              href="/portfolio"
-              className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105 text-center min-w-48"
-            >
-              View Case Studies
-            </Link>
           </div>
           <p className="text-blue-200 mt-6 text-sm">
-            💬 Free consultation • 📞 24/7 support • ✅ 30-day guarantee
+            💬 Free consultation • 📞 24/7 support
           </p>
         </div>
       </div>

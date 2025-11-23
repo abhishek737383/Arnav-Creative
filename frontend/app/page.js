@@ -207,15 +207,15 @@ export default function Home() {
                 gradient: "from-yellow-500 to-orange-500"
               },
               {
-                title: "Business Freelancing",
-                description: "Professional freelancing solutions for your business needs",
-                icon: "💎",
-                gradient: "from-indigo-500 to-purple-500"
-              },
-              {
                 title: "Website Maintenance",
                 description: "Regular updates, security patches, and performance optimization",
                 icon: "🔧",
+                gradient: "from-indigo-500 to-purple-500"
+              },
+                 {
+                title: "Business Freelancing",
+                description: "Professional freelancing solutions for your business needs",
+                icon: "💎",
                 gradient: "from-indigo-500 to-purple-500"
               }
             ].map((service, index) => (

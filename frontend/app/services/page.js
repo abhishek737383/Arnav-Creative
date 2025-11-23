@@ -53,7 +53,7 @@ export default function Services() {
       description: 'Fast, secure, and scalable websites using modern technologies.',
       includes: [
         'Custom website development',
-        'WordPress, Shopify, Wix, Webflow',
+        'React, Node.js, and Next.js , MongoDB',
         'Frontend & backend development',
         'API integration'
       ],
@@ -81,24 +81,6 @@ export default function Services() {
         'Documentation'
       ],
       gradient: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 'seo',
-      icon: '🔍',
-      title: 'SEO',
-      description: 'Increase visibility, traffic, and ranking with comprehensive search engine optimization.',
-      includes: [
-        'On-page optimization',
-        'Keyword research',
-        'Page speed optimization',
-        'Technical SEO'
-      ],
-      deliverables: [
-        'SEO audit report',
-        'Optimized website',
-        'Performance metrics'
-      ],
-      gradient: 'from-orange-500 to-red-500'
     },
     {
       id: 'branding',
@@ -135,6 +117,24 @@ export default function Services() {
         'Performance analytics'
       ],
       gradient: 'from-indigo-500 to-purple-500'
+    },
+    {
+      id: 'business-freelancing',
+      icon: '🚀',
+      title: 'G. Business Freelancing',
+      description: 'Comprehensive business solutions to drive growth and success.',
+      includes: [
+        'Lead Generation Services',
+        'Marketing Services',
+        'Sales Service',
+        'Business Consulting'
+      ],
+      deliverables: [
+        'Business Analysis Report',
+        'Go-to-Market Strategic plan',
+        'Business Plan & Roadmap'
+      ],
+      gradient: 'from-red-500 to-orange-500'
     }
   ]
 
@@ -267,22 +267,16 @@ export default function Services() {
             >
               Get Free Consultation
             </Link>
-            <Link 
-              href="/portfolio"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105 text-center"
-            >
-              View Our Portfolio
-            </Link>
           </div>
         </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-gray-200 animate-on-scroll">
           {[
-            { number: "500+", label: "Projects Delivered" },
+            { number: "20+", label: "Projects Delivered" },
             { number: "98%", label: "Client Satisfaction" },
             { number: "24/7", label: "Support Available" },
-            { number: "50+", label: "Technologies Used" }
+            { number: "10+", label: "Years Experience" }
           ].map((stat, index) => (
             <div key={index} className="text-center group hover:scale-105 transition-transform duration-300">
               <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">

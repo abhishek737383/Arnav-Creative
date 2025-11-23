@@ -41,8 +41,8 @@ export default function Navbar() {
                   className="rounded-xl"
                 /> }
               </div>
-              <span className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-              Arnav Creative 
+              <span className="text-1xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+              Arnav Creative Solutions
               </span>
             </Link>
 
@@ -139,13 +139,13 @@ export default function Navbar() {
             >
               Services
             </Link>
-            <Link 
+            {/* <Link 
               href="/portfolio" 
               className="block py-4 px-4 text-gray-300 hover:text-white hover:bg-gray-800 rounded-xl text-lg font-semibold transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               Portfolio
-            </Link>
+            </Link> */}
             <Link 
               href="/pricing" 
               className="block py-4 px-4 text-gray-300 hover:text-white hover:bg-gray-800 rounded-xl text-lg font-semibold transition-colors duration-200"
