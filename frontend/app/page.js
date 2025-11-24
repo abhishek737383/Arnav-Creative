@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { FaHandshake } from "react-icons/fa";
 
 export default function Home() {
   const observerRef = useRef(null)
