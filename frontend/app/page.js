@@ -213,12 +213,12 @@ export default function Home() {
                 icon: "🔧",
                 gradient: "from-indigo-500 to-purple-500"
               },
-                 {
+              {
                 title: "Business Freelancing",
-                description: "Professional freelancing solutions for your business needs",
-                icon: "🤝",
-                gradient: "from-indigo-500 to-purple-500"
-              }
+               description: "Professional freelancing solutions for your business needs",
+               icon: <FaHandshake className="text-4xl" />,
+               gradient: "from-indigo-500 to-purple-500"
+                 }
             ].map((service, index) => (
               <div 
                 key={index} 
