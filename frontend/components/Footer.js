@@ -118,13 +118,13 @@ export default function Footer() {
               © {new Date().getFullYear()} Arnav Creative Solutions. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <Link href="/legal/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link href="/terms-conditions" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <Link href="/legal/terms-conditions" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
                 Terms & Conditions
               </Link>
-              <Link href="/refund-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <Link href="/legal/refund-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
                 Refund Policy
               </Link>
             </div>
