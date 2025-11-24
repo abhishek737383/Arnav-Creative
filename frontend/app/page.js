@@ -215,7 +215,7 @@ export default function Home() {
                  {
                 title: "Business Freelancing",
                 description: "Professional freelancing solutions for your business needs",
-                icon: "💎",
+                icon: "🤝",
                 gradient: "from-indigo-500 to-purple-500"
               }
             ].map((service, index) => (
@@ -345,7 +345,7 @@ export default function Home() {
             {[
               { number: "98%", label: "Client Satisfaction" },
               { number: "24h", label: "Avg. Response Time" },
-              { number: "50+", label: "Projects Completed" },
+              { number: "20+", label: "Projects Completed" },
               { number: "100%", label: "On-Time Delivery" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
