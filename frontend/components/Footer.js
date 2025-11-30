@@ -99,12 +99,12 @@ export default function Footer() {
               <div className="flex items-center space-x-2">
                 <span>🔗</span>
                 <a 
-                  href="https://arnav-creative.netlify.app" 
+                  href="www.arnavcreativesolutions.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  arnav-creative.netlify.app
+                 www.arnavcreativesolutions.com
                 </a>
               </div>
             </div>
