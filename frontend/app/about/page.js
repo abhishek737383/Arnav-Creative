@@ -29,6 +29,19 @@ export default function About() {
     }
   }, [])
 
+  // Gradient color arrays for different sections
+  const missionVisionGradients = [
+    "from-blue-500 to-cyan-600",
+    "from-green-500 to-emerald-600"
+  ]
+
+  const coreValuesGradients = [
+    "from-purple-500 to-pink-600",
+    "from-orange-500 to-red-600",
+    "from-indigo-500 to-purple-600",
+    "from-teal-500 to-blue-600"
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50 pt-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -74,36 +87,43 @@ export default function About() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent flex items-end">
               <div className="p-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Arnav Creative Solutions</h3>
-                <p className="text-blue-100">Creating digital experiences that make a difference</p>
+            
               </div>
             </div>
           </div>
         </div>
 
-        {/* Mission & Vision */}
+        {/* Mission & Vision - Updated with Colors */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 animate-on-scroll">
           {/* Mission */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-blue-500 group hover:shadow-2xl transition-all duration-500 hover:scale-105">
-            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-            <p className="text-gray-600 leading-relaxed">
-              To help businesses grow online through high-quality, affordable, innovative digital solutions.
-            </p>
+          <div className={`bg-gradient-to-br ${missionVisionGradients[0]} rounded-2xl shadow-xl p-8 text-white group hover:shadow-2xl transition-all duration-500 hover:scale-105 relative overflow-hidden min-h-64`}>
+            {/* Shine Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+            <div className="relative z-10">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
+              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <p className="text-white/90 leading-relaxed">
+                To help businesses grow online through high-quality, affordable, innovative digital solutions.
+              </p>
+            </div>
           </div>
 
           {/* Vision */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-purple-500 group hover:shadow-2xl transition-all duration-500 hover:scale-105">
-            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">👁️</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-            <p className="text-gray-600 leading-relaxed">
-              To be recognized as a trusted web development partner known for creativity, transparency, and exceptional results.
-            </p>
+          <div className={`bg-gradient-to-br ${missionVisionGradients[1]} rounded-2xl shadow-xl p-8 text-white group hover:shadow-2xl transition-all duration-500 hover:scale-105 relative overflow-hidden min-h-64`}>
+            {/* Shine Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+            <div className="relative z-10">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">👁️</div>
+              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+              <p className="text-white/90 leading-relaxed">
+                To be recognized as a trusted web development partner known for creativity, transparency, and exceptional results.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Core Values */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16 animate-on-scroll group hover:shadow-xl transition-shadow duration-500">
+        {/* Core Values - Updated with Colors */}
+        <div className="mb-16 animate-on-scroll">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Core Values
@@ -138,17 +158,22 @@ export default function About() {
             ].map((value, index) => (
               <div 
                 key={index} 
-                className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 text-center group-hover:shadow-lg transition-all duration-500 hover:scale-105 hover:border-blue-200"
+                className={`bg-gradient-to-br ${coreValuesGradients[index]} text-white rounded-xl shadow-xl p-6 relative overflow-hidden group hover:scale-105 transition-all duration-500 hover:shadow-2xl min-h-64`}
               >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {value.icon}
+                {/* Shine Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                
+                <div className="relative z-10 text-center">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {value.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-white transition-colors">
+                    {value.title}
+                  </h3>
+                  <p className="text-white/90 text-sm leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {value.description}
-                </p>
               </div>
             ))}
           </div>
@@ -186,7 +211,7 @@ export default function About() {
           </div>
 
           <div className="space-y-6">
-            {/* Why Choose Us */}
+            {/* Why Choose Us - KEPT UNCHANGED as requested */}
             <div className="bg-white rounded-2xl shadow-lg p-8 group hover:shadow-2xl transition-all duration-500 hover:scale-105">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Work With Us?</h3>
               <div className="space-y-4">

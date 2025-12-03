@@ -17,7 +17,7 @@ export default function Contact() {
     phone: '+91 - 9892018597',
     email: 'acstechbiz@outlook.com',
     website: 'https://arnav-creative.netlify.app',
-    location: 'Mumbai - 401107',
+    location: 'Symphony IT Park, Off - A/1 Andheri (East), Mumbai - 400072',
     tagline: 'Sell More With Smart Solutions',
     // <-- real uploaded file path (will be converted to a served URL by your environment)
     logoSrc: '/logo.png'

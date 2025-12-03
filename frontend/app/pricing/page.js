@@ -266,14 +266,14 @@ export default function Pricing() {
           {[
             {
               quote: "The Business Pro plan was perfect for our agency. The value for money is incredible!",
-              author: "Sarah Chen",
-              company: "Marketing Director, TechGrowth",
+              author: "Rohan Bhatt",
+              company: "Marketing Director",
               rating: 5
             },
             {
               quote: "From start to finish, the process was smooth. The e-commerce store exceeded our expectations.",
-              author: "Mike Rodriguez",
-              company: "Founder, UrbanStyle",
+              author: "Abhishek Kushwaha",
+              company: "King Products",
               rating: 5
             }
           ].map((testimonial, index) => (

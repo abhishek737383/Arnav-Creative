@@ -36,6 +36,25 @@ export default function Home() {
     }
   }
 
+  // Gradient color arrays
+  const whyChooseUsGradients = [
+    "from-blue-500 to-cyan-600",
+    "from-green-500 to-emerald-600",
+    "from-purple-500 to-pink-600",
+    "from-orange-500 to-red-600",
+    "from-indigo-500 to-purple-600",
+    "from-teal-500 to-blue-600"
+  ]
+
+  const servicesGradients = [
+    "from-blue-500 to-cyan-600",
+    "from-green-500 to-emerald-600",
+    "from-purple-500 to-pink-600",
+    "from-yellow-500 to-orange-600",
+    "from-indigo-500 to-purple-600",
+    "from-pink-500 to-rose-600"
+  ]
+
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section - Starts immediately after navbar */}
@@ -95,7 +114,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section - Updated Colors */}
       <section className="py-20 bg-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute top-0 right-0 w-72 h-72 bg-blue-50 rounded-full -translate-y-36 translate-x-36"></div>
@@ -146,18 +165,19 @@ export default function Home() {
             ].map((feature, index) => (
               <div 
                 key={index} 
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group hover:scale-105 border border-gray-200/50 animate-on-scroll relative overflow-hidden"
+                className={`bg-gradient-to-br ${whyChooseUsGradients[index]} text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105 animate-on-scroll relative overflow-hidden min-h-64 flex flex-col justify-between`}
               >
-                {/* Hover Effect Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Shine Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                
                 <div className="relative z-10">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-white transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  <p className="text-white/90 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -165,7 +185,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Highlights */}
+      {/* Services Highlights - Updated Colors */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent"></div>
@@ -186,56 +206,55 @@ export default function Home() {
               {
                 title: "Web Design",
                 description: "Beautiful, user-friendly designs that convert visitors into customers",
-                icon: "🎨",
-                gradient: "from-purple-500 to-pink-500"
+                icon: "🎨"
               },
               {
                 title: "Web Development",
                 description: "Robust, scalable websites built with modern technologies",
-                icon: "💻",
-                gradient: "from-blue-500 to-cyan-500"
+                icon: "💻"
               },
               {
                 title: "E-commerce Websites",
                 description: "Complete online stores with secure payment integration",
-                icon: "💼",
-                gradient: "from-green-500 to-emerald-500"
+                icon: "💼"
               },
               {
                 title: "Branding & Logo Design",
                 description: "Memorable brand identity that stands out from competition",
-                icon: "✨",
-                gradient: "from-yellow-500 to-orange-500"
+                icon: "✨"
               },
               {
                 title: "Website Maintenance",
                 description: "Regular updates, security patches, and performance optimization",
-                icon: "🔧",
-                gradient: "from-indigo-500 to-purple-500"
+                icon: "🔧"
               },
               {
                 title: "Business Freelancing",
-               description: "Professional freelancing solutions for your business needs",
-               icon: <FaHandshake className="text-4xl" />,
-               gradient: "from-indigo-500 to-purple-500"
-                 }
+                description: "Professional freelancing solutions for your business needs",
+                icon: <FaHandshake className="text-4xl" />
+              }
             ].map((service, index) => (
               <div 
                 key={index} 
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group hover:scale-105 animate-on-scroll relative overflow-hidden"
+                className={`bg-gradient-to-br ${servicesGradients[index]} text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105 animate-on-scroll relative overflow-hidden min-h-72 flex flex-col justify-between`}
               >
-                <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${service.gradient}`}></div>
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                {/* Shine Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                
+                <div>
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-white transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/90 leading-relaxed mb-4">{service.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                
                 <div className="mt-4">
                   <Link 
                     href="/contact" 
-                    className="text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-200 group-hover:translate-x-2 transform transition-transform inline-block"
+                    className="inline-flex items-center text-white font-semibold text-sm hover:text-white/90 transition-colors duration-200 group-hover:translate-x-2 transform transition-transform"
                   >
                     Learn more →
                   </Link>
@@ -330,7 +349,7 @@ export default function Home() {
                     </div>
                     
                     <Link 
-                      href="/portfolio"
+                      href="/services"
                       className="block w-full bg-white text-gray-900 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 transform group-hover:-translate-y-1 active:scale-95 text-center"
                     >
                       View Project
@@ -370,9 +389,9 @@ export default function Home() {
             "Amazing service! The website exceeded our expectations. Highly recommended for anyone looking for professional web solutions."
           </blockquote>
           <div className="text-xl font-semibold text-blue-300 mb-2 animate-on-scroll">
-            — Sarah Johnson
+          Yateendra Shrivastava
           </div>
-          <div className="text-blue-200 mb-8 animate-on-scroll">TechStart Inc</div>
+          <div className="text-blue-200 mb-8 animate-on-scroll">eAARVI</div>
           <div className="flex justify-center space-x-1 animate-on-scroll">
             {[1, 2, 3, 4, 5].map((star) => (
               <span key={star} className="text-2xl text-yellow-400 animate-pulse" style={{ animationDelay: `${star * 100}ms` }}>⭐</span>

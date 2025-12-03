@@ -121,7 +121,7 @@ export default function Services() {
     {
       id: 'business-freelancing',
       icon: '🚀',
-      title: 'G. Business Freelancing',
+      title: 'Business Freelancing',
       description: 'Comprehensive business solutions to drive growth and success.',
       includes: [
         'Lead Generation Services',

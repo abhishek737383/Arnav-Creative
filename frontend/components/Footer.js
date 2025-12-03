@@ -94,7 +94,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <span>📍</span>
-                <span>Mumbai - 401107</span>
+                <span>Symphony IT Park, Off - A/1 Andheri (East), Mumbai - 400072</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span>🔗</span>
@@ -123,9 +123,6 @@ export default function Footer() {
               </Link>
               <Link href="/legal/terms-conditions" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
                 Terms & Conditions
-              </Link>
-              <Link href="/legal/refund-policy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-                Refund Policy
               </Link>
             </div>
           </div>
