@@ -12,7 +12,6 @@ export default function Contact() {
 
   // Use the uploaded image path as the logo source:
   const business = {
-    ownerName: 'Rakesh Maurya',
     title: 'Business Owner',
     phone: '+91 - 8601859711', // Updated WhatsApp number
     email: 'acstechbiz@outlook.com',
