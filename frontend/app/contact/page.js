@@ -14,9 +14,9 @@ export default function Contact() {
   const business = {
     ownerName: 'Rakesh Maurya',
     title: 'Business Owner',
-    phone: '+91 - 9892018597',
+    phone: '+91 - 8601859711', // Updated WhatsApp number
     email: 'acstechbiz@outlook.com',
-    website: 'https://arnav-creative.netlify.app',
+    website: 'https://www.arnavcreativesolutions.com', // Updated domain
     location: 'Symphony IT Park, Off - A/1 Andheri (East), Mumbai - 400072',
     tagline: 'Sell More With Smart Solutions',
     // <-- real uploaded file path (will be converted to a served URL by your environment)
@@ -44,11 +44,11 @@ export default function Contact() {
 *Project Details:*
 ${formData.message}
 
-*Submitted via:* arnav-creative.netlify.app
+*Submitted via:* www.arnavcreativesolutions.com // Updated domain
     `.trim()
 
     const encodedMessage = encodeURIComponent(whatsappMessage)
-    const whatsappUrl = `https://wa.me/919892018597?text=${encodedMessage}`
+    const whatsappUrl = `https://wa.me/918601859711?text=${encodedMessage}` // Updated WhatsApp number
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
     alert('Thank you — opening WhatsApp to send your details.')
     setFormData({ name: '', email: '', phone: '', service: '', message: '' })
@@ -57,7 +57,7 @@ ${formData.message}
   const openWhatsAppChat = () => {
     const message = "Hi! I visited your website and I'm interested in your services. Let's chat on WhatsApp!"
     const encodedMessage = encodeURIComponent(message)
-    const whatsappUrl = `https://wa.me/919892018597?text=${encodedMessage}`
+    const whatsappUrl = `https://wa.me/918601859711?text=${encodedMessage}` // Updated WhatsApp number
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 
